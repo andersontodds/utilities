@@ -22,8 +22,12 @@ switch class(signed_magnitude)
         error('Input is not a signed integer type!')
 end
 
-sm_bset = bitset(signed_magnitude, n_bits, 0);
-sm_invert = bitcmp(sm_bset);
-twos_complement = sm_invert +1;
+if bitget(signed_magnitude, n_bits) == 1
+    sm_bset = bitset(signed_magnitude, n_bits, 0);
+    sm_invert = bitcmp(sm_bset);
+    twos_complement = sm_invert +1;
+else
+    twos_complement = signed_magnitude;
+end
 
 end
