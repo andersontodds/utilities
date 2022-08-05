@@ -1,0 +1,33 @@
+#!/bin/bash
+# try using curl to access files at URL
+
+## get headers from website
+#URL=https://andersontodds@github.io
+
+#curl ${URL} -I -o headers -s
+
+#cat headers
+
+## get just page code (e.g. 200)
+#cat headers | head -n 1 | cut '-d' '-f2'
+
+# fetch file from website
+
+if [[ $# != 3 ]]
+then
+  echo "USAGE: ./curldemo yyyy mm dd "
+  echo "  this script fetches blog posts from Todd's "
+  echo "  personal website:  "
+  echo "    https://andersontodds.github.io "
+  exit 1
+fi
+
+SITE="https://andersontodds.github.io"
+
+PATH="docs/_posts"
+
+FILEDATE=$1"-"$2"-"$3
+
+echo "fetching "$SITE/$PATH/$FILEDATE
+
+curl -O $SITE/$PATH/$FILEDATE*

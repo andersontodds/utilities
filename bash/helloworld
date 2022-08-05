@@ -1,0 +1,11 @@
+#!/bin/bash
+# Basic "Hello World" test script
+echo "     __   __      _  _  __   _  "
+echo "    |  |_|  | __ | || |/  \ | | "
+echo "    |       |/  \| || |    || | "
+echo "    |   _   |  _|| || |  . ||_| "
+echo "    |__| |__|\__||_||_|\__/ [_] "
+
+echo "Hello, World!"
+read -p "What is your name? " name
+echo "Hello, ${name}!"
