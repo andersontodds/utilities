@@ -6,6 +6,11 @@ function LST = localsolartime(time, longitude, timezone)
 %   
 %
 
+if ~exist('timezone', 'var')
+    % no timezone specified; default to 0
+    timezone = 0;
+end
+
 timevec = datevec(time);
 
 DOY = floor(datenum(time)) - datenum(timevec(:,1),1,0); % day of year
