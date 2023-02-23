@@ -15,14 +15,15 @@ function dip = horizondip(altitude, refraction)
 %   dip:        positive angle between the horizontal and the horizon
 
 % constants
-R = 6371.8E3;   % Earth radius in km
+R = 6371.8E3;   % Earth radius in m
 %k = 0.13;       % atmosphere refraction ratio of curvatures
 
 % without refraction
 % dip = sqrt(2*altitude/R);
 
 % with refraction
-dip = sqrt(2*altitude/(R/(1-refraction)));
+% dip = sqrt(2*altitude/(R/(1-refraction)));    % with small-angle approximation
+dip = acos(R./(R+altitude.*(1-refraction)));
 
 dip = rad2deg(dip);
 

@@ -15,3 +15,4 @@ end
 LST = localsolartime(time, longitude, timezone);
 
 SHA = 15*(LST - 12);
+end

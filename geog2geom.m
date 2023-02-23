@@ -44,3 +44,4 @@ for i=1:n
     %Then compute the magnetic latitude (geom_lat) as: tand(MLAT)=0.5*tand(I)
     geom_lat(i)=atand(0.5*tand(I));
 end
+end
