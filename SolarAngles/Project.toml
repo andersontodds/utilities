@@ -1,0 +1,4 @@
+name = "SolarAngles"
+uuid = "b4d1f5d0-4859-4347-a5ff-501c1ec02ccf"
+authors = ["Todd Anderson <andersontodds@gmail.com>"]
+version = "0.1.0"
